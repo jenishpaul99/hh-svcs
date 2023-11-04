@@ -1,0 +1,16 @@
+services:
+  nginx:
+    restart: always
+    build: ./nginx/
+    ports:
+      - "8000:8000"
+    depends_on:
+      - web
+  web:
+    build: ./web/
+    command: gunicorn main:app -w 2 -b :5000
+    expose:
+      - 5000
+
+volumes:
+  web:
