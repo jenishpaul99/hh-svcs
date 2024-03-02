@@ -6,6 +6,9 @@ services:
       - "80:8000"
     depends_on:
       - web
+    volumes:
+      - /private/var/services/nginx/letsencrypt:/etc/letsencrypt
+    command: nginx-entrypoint.sh
   web:
     build: ./web/
     command: gunicorn main:app -w 2 -b :5000
