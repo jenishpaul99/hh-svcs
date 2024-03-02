@@ -1,4 +1,4 @@
-docker exec -it nginx bash
+docker exec -it hh-svcs-nginx-1 bash
 
 sudo apt update -y
 sudo apt upgrade -y
