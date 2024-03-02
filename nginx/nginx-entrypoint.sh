@@ -5,4 +5,4 @@
 # echo "adding crontab"
 # echo "0 23 * * * certbot renew --dry-run" | crontab -
 
-nginx
+# nginx
